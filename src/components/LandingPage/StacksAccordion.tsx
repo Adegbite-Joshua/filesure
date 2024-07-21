@@ -8,7 +8,7 @@ import {
 
 export function StacksAccordion() {
     return (
-        <div className="col-span-1">
+        <div className="col-span-2 md:col-span-1">
             <Accordion type="single" collapsible className="w-auto">
                 <AccordionItem value="item-1" className='w-auto'>
                     <AccordionTrigger>iOS development</AccordionTrigger>
