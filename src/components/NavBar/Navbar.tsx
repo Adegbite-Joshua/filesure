@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function Navbar() {
     return (
-        <div className="fixed top-4 bg-transparent w-full flex z-50 px-8 py-4 rounded-lg">
-            <div className="container rounded-xl p-2 mx-auto bg-white flex flex-col md:flex-row justify-center md:justify-between items-center">
+        <nav className="fixed top-4 bg-transparent w-full flex z-50 px-8 py-4 rounded-lg">
+            <div className="container rounded-xl p-2 mx-auto bg-white shadow-md flex flex-col md:flex-row justify-center md:justify-between items-center">
                 <div className='w-full md:w-3/6 flex flex-col md:flex-row justify-center'>
                     <img className='w-24 h-18 md:w-2/5  mx-auto' src="/logo.png" alt="Company logo" />
                     <div className='flex w-full md:w-3/5 items-center gap-2 justify-center md:justify-around font-bold'>
@@ -26,6 +26,6 @@ export default function Navbar() {
                     </a>
                 </div>
             </div>
-        </div>
+        </nav>
     )
 }
