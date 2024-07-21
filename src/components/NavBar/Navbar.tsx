@@ -8,11 +8,11 @@ export default function Navbar() {
                 <div className='w-full md:w-3/6 flex flex-col md:flex-row justify-center'>
                     <img className='w-24 h-18 md:w-2/5  mx-auto' src="/logo.png" alt="Company logo" />
                     <div className='flex w-full md:w-3/5 items-center gap-2 justify-center md:justify-around font-bold'>
-                        <Link className='text-sm md:text-lg' href={''}>Services</Link>
-                        <Link className='text-sm md:text-lg' href={''}>Media</Link>
-                        <Link className='text-sm md:text-lg' href={''}>Cases</Link>
-                        <Link className='text-sm md:text-lg' href={''}>FAQ</Link>
-                        <Link className='text-sm md:text-lg' href={''}>Contacts</Link>
+                        <Link className='text-sm md:text-lg' href={'/services'}>Services</Link>
+                        <Link className='text-sm md:text-lg' href={'/media'}>Media</Link>
+                        <Link className='text-sm md:text-lg' href={'cases'}>Cases</Link>
+                        <Link className='text-sm md:text-lg' href={'faqs'}>FAQ</Link>
+                        <Link className='text-sm md:text-lg' href={'contacts'}>Contacts</Link>
                     </div>
                 </div>
                 <div className='w-full md:w-3/6 text-green-600 flex flex-col md:flex-row pt-3 md:pt-0 md:gap-2 items-center justify-center md:justify-end font-bold md:me-5'>
@@ -20,10 +20,10 @@ export default function Navbar() {
                         <img className='h-4 w-4' src="/cell_phone.png" alt="Cell phone icon" />
                         <span>+91 00000000</span>
                     </Link>
-                    <Link className='flex items-center gap-1 justify-between' href={''}>
+                    <a className='flex items-center gap-1 justify-between' href={'mailto:demo@gmail.com'}>
                         <img className='h-4 w-4' src="/email.png" alt="Email icon" />
                         <span>demo@gmail.com</span>
-                    </Link>
+                    </a>
                 </div>
             </div>
         </div>

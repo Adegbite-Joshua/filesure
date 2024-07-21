@@ -59,7 +59,7 @@ export const ConsultationForm = ({isDiscussionForm, buttonText, handleSubmit} : 
         </div>
         <button
           type="submit"
-          className={`${isDiscussionForm ? "col-span-6 text-sm ms-auto bg-yellow-400 hover:bg-yellow-500" : "col-span-3"} h-14 mt-auto py-2 px-4 bg-lime-600 text-white rounded-md hover:bg-lime-700 focus:outline-none`}
+          className={`${isDiscussionForm ? "col-span-6 text-sm ms-auto bg-yellow-400 hover:bg-yellow-500" : "col-span-5 text-sm md:text-lg md:col-span-3"} h-14 mt-auto py-2 px-4 bg-lime-600 text-white rounded-md hover:bg-lime-700 focus:outline-none`}
         >{buttonText}
         </button>
       </form>

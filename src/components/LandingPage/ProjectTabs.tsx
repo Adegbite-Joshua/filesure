@@ -79,10 +79,10 @@ function Project({ project }: { project: string }) {
         </div>
 
         <div className="md:w-5/12 flex justify-end items-end mb-8">
-          <a href="#" className="mr-4">
+          <a href="www.apple.com" className="mr-4">
             <img src="app_store.png" alt="Download on the App Store" />
           </a>
-          <a href="#">
+          <a href="play.google.com">
             <img src="play_store.png" alt="Get it on Google Play" />
           </a>
         </div>

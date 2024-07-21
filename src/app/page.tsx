@@ -2,6 +2,7 @@
 import Footer from "@/components/Footer/Footer";
 import ApplicationStages from "@/components/LandingPage/ApplicationStages";
 import { ConsultationForm } from "@/components/LandingPage/ConsultationForm";
+import { FaqsAccordion } from "@/components/LandingPage/FaqsAccordion";
 import Project from "@/components/LandingPage/Project";
 import ProjectTabs from "@/components/LandingPage/ProjectTabs";
 import Stacks from "@/components/LandingPage/Stacks";
@@ -51,11 +52,16 @@ export default function Home() {
   };
 
 
+  const faqs = [
+    { question: 'What is the cost of a mobile application?', answer: 'The cost varies based on the requirements and complexity of the project.' },
+    { question: 'How long will development take?', answer: 'Development time depends on the project scope. Medium projects take up to 3 months, while large projects take 4-6 months. Average development time from start to finished application: Medium projects up to <strong>3 months</strong>. Large projects about <strong>4-6 months</strong>. To get a more accurate estimate of the project completion time, it is necessary to determine the main task of the application, think over its logic and functionality.' },
+    { question: 'Do you provide a guarantee for the mobile application?', answer: 'Yes, we provide a guarantee period for our developed applications.' },
+    { question: 'I will not tell my idea, do you guarantee confidentiality?', answer: 'Yes, we guarantee confidentiality for all client ideas and projects.' },
+];
   return (
     <main className="relative w-full">
-
-
       <Navbar />
+
       <div className="bg-slate-100 pt-40 relative overflow-hidden">
         <div className="flex flex-col p-5 md:p-28 relative z-10">
           <div className="md:w-3/6">
@@ -76,6 +82,7 @@ export default function Home() {
           <img src="/hope.png" alt="Image 4" className="col-span-2 p-4" />
         </div>
       </div>
+
       <div className="p-3 md:p-10">
         <hr />
         <div className="flex flex-wrap justify-evenly my-14">
@@ -98,29 +105,30 @@ export default function Home() {
           <StacksAccordion />
         </div>
       </div>
+
       <div className="bg-slate-100 p-5 md:p-28">
-        <h3 className="w-3/6 font-bold text-4xl">Develpoed more than <span className="text-green-600">100</span> projects in <span className="text-green-600">15</span> industries</h3>
+        <h3 className="md:w-3/6 font-bold text-4xl">Developed more than <span className="text-green-600">100</span> projects in <span className="text-green-600">15</span> industries</h3>
         <div className="grid grid-cols-6 gap-4 my-5">
           <div className="col-span-6 md:col-span-3 lg:col-span-2">
             <Project icon="/social.png" project="Social media" />
-            <Project icon="/social.png" project="Fitness and sport" />
-            <Project icon="/social.png" project="Bank" />
-            <Project icon="/social.png" project="Construction" />
-            <Project icon="/social.png" project="Game projects" />
+            <Project icon="/sport.png" project="Fitness and sport" />
+            <Project icon="/bank.png" project="Bank" />
+            <Project icon="/construction.png" project="Construction" />
+            <Project icon="/game.png" project="Game projects" />
           </div>
           <div className="col-span-6 md:col-span-3 lg:col-span-2">
-            <Project icon="/social.png" project="Education" />
-            <Project icon="/social.png" project="Auto, transport" />
-            <Project icon="/social.png" project="Medicine, health" />
-            <Project icon="/social.png" project="Restaurants, food delivery" />
-            <Project icon="/social.png" project="Marketplaces" />
+            <Project icon="/education.png" project="Education" />
+            <Project icon="/transport.png" project="Auto, transport" />
+            <Project icon="/health.png" project="Medicine, health" />
+            <Project icon="/restaurant.png" project="Restaurants, food delivery" />
+            <Project icon="/market-place.png" project="Marketplaces" />
           </div>
           <div className="col-span-6 md:col-span-3 lg:col-span-2">
-            <Project icon="/social.png" project="AR technology" />
-            <Project icon="/social.png" project="TV series" />
-            <Project icon="/social.png" project="Startups" />
-            <Project icon="/social.png" project="Religion" />
-            <Project icon="/social.png" project="Online courses" />
+            <Project icon="/technology.png" project="AR technology" />
+            <Project icon="/tv.png" project="TV series" />
+            <Project icon="/work.png" project="Startups" />
+            <Project icon="/religion.png" project="Religion" />
+            <Project icon="/courses.png" project="Online courses" />
           </div>
         </div>
         <h3 className="text-4xl font-bold">Projects we are proud of</h3>
@@ -141,7 +149,8 @@ export default function Home() {
           <ConsultationForm isDiscussionForm={true} buttonText="Discuss the project" handleSubmit={handleDiscussionSubmit} />
         </div>
       </div>
-      <div className="container p-12">
+
+      <div className="container p-5 md:p-12">
         <h3 className="text-4xl font-bold">Application Development Stages</h3>
         <div className="grid grid-cols-6">
           <div className="col-span-6 md:col-span-3 lg:col-span-2">
@@ -164,16 +173,16 @@ export default function Home() {
               stageIcon="/3.png"
             />
           </div>
-          <img  className="col-span-6 md:col-span-3 lg:col-span-2 h-auto my-auto" src="/hope.png" alt="Application Development Stages Image" />
+          <img className="col-span-6 md:col-span-3 lg:col-span-2 h-auto my-auto" src="/hope.png" alt="Application Development Stages Image" />
           <div className="col-span-6 md:col-span-3 lg:col-span-2">
             <ApplicationStages
-              icon="/testing.png"
+              icon="/copyright.png"
               title="Testing"
               text="We carry out functional testing and do bug fixes. We adapt the application to different phone resolutions."
               stageIcon="/4.png"
             />
             <ApplicationStages
-              icon="/launching.png"
+              icon="/hosting.png"
               title="Launching"
               text="We design the application page and publish it in the App Store and Google Play stores."
               stageIcon="/5.png"
@@ -187,7 +196,36 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Footer/>
+
+      <div className="bg-slate-100 grid grid-cols-1 md:grid-cols-2 gap-3 p-5 md:p-20">
+        <div>
+          <h3 className="text-3xl font-bold my-5">Our Team</h3>
+          <p className="font-semibold">Thousand is a full-cycle digital production company with its ownproduct analysis, design, web and mobile development.</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 my-5">
+            <div>
+              <h3 className="text-4xl font-bold">28</h3>
+              <p className="font-semibold my-3 text-gray-500">team members</p>
+            </div>
+            <div>
+              <h3 className="text-4xl font-bold">+100</h3>
+              <p className="font-semibold my-3 text-gray-500">projects</p>
+            </div>
+            <div>
+              <h3 className="text-4xl font-bold">7 years</h3>
+              <p className="font-semibold my-3 text-gray-500">in IT sphere</p>
+            </div>
+          </div>
+          <p className="font-semibold">All the neccessary specialists - from a designer to a tester - are on our staff. We hire the best specialists in the market. It's expensive but worth it</p>
+        </div>
+        <img src="/our-team.png" alt="Our Team" className="shadow-lg rounded-md" />
+      </div>
+
+      <div className="p-5 md:p-20">
+        <h3 className="text-4xl font-bold">FAQ</h3>
+        <FaqsAccordion faqs={faqs} />
+      </div>
+
+      <Footer />
     </main>
   );
 }
